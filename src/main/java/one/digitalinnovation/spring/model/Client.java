@@ -10,16 +10,18 @@ public class Client {
     private Address address;
     private String phone;
     private LocalDate birthDate;
+    private Cart cart;
 
     public Client() {
 
     }
-    public Client(User user, String name, Address address, String phone, LocalDate birthDate) {
+    public Client(User user, String name, Address address, String phone, LocalDate birthDate, Cart cart) {
         this.user = user;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.birthDate = birthDate;
+        this.cart = cart;
     }
 
     public User getUser() {
@@ -62,6 +64,14 @@ public class Client {
         this.birthDate = birthDate;
     }
 
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
@@ -70,6 +80,7 @@ public class Client {
                 ", address=" + address +
                 ", phone='" + phone + '\'' +
                 ", birthDate=" + birthDate +
+                ", cart=" + cart +
                 '}';
     }
 }
